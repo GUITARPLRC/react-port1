@@ -1,0 +1,162 @@
+body {
+	/*
+	background-image:url('https://unsplash.it/1920/1080?image=484');
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	*/
+	background-color:#00796B;
+	color:#fff;
+	font-family:Roboto, sans-serif;
+	letter-spacing:2px;
+	margin:0 0 3% 0;
+	min-height:92vh;
+	overflow-x:hidden;
+}
+
+ul {
+	padding:0;
+}
+
+li {
+	list-style-type:none;
+}
+
+a {
+	color:#ddd;
+	text-decoration:none;
+	transition:all 0.3s;
+}
+a:hover {
+	color:#4DD0E1;
+}
+.row {
+	display:flex;
+	justify-content:space-around;
+}
+
+.column {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+.column input {
+	border-radius:3px;
+	margin:10px 0;
+	padding:5px;
+	border:1px solid rgba(0,0,0,0.43);
+	font-size:16px;
+	width:80%;
+}
+
+.column label {
+	text-align:center;
+	font-size:30px;
+	font-weight:200;
+}
+
+.header {
+	text-align:center;
+	font-size:30px;
+	font-weight:200;
+}
+
+.container {
+	margin:0 auto;
+}
+
+#logo {
+	border-radius:50%;
+	margin:20px;
+}
+
+.social {
+	margin:10px 0 0 15px;
+}
+
+.social a {
+	color:#000;
+	transition:color 0.3s;
+}
+
+.social a:hover {
+	color: #666;
+}
+
+.social a:nth-child(2) {
+	margin:0 0 0 15px;
+}
+
+.fa-files-o, .fa-code {
+	color:rgb(82, 169, 238);
+}
+
+#jquery, #react, #d3, #vanilla {
+	vertical-align:middle;
+}
+
+
+#home {
+	text-align:center;
+}
+.skills {
+	margin:2% auto 0 auto;
+	padding:1% 2%;
+	text-align:center;
+}
+.skills h2 {
+	font-size:30px;
+	margin:0 0 2% 0;
+}
+.skills .eachSkill {
+	display:flex;
+	justify-content:space-around;
+}
+.skills .eachSkill p {
+	font-size:24px;
+}
+
+
+.projects {
+	color:#fff;
+	text-align:center;
+}
+.items{
+	display:flex;
+	justify-content:space-around;
+}
+.items div {
+	position:relative;
+	transition:0.3s ease;
+}
+.items div img {
+	border-radius:5px;
+	height:250px;
+	width:23vw;
+}
+.items div .text {
+	left:50%;
+	opacity:0;
+	padding:0 10px;
+	position:absolute;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+.items div:hover img {
+	opacity:0.3
+}
+.items div:hover .text {
+	background-color:rgb(48, 123, 150);
+	opacity:1;
+}
+
+@media screen and (max-width:768px) {
+	.items {
+		display:block;
+	}
+	.items div img {
+		margin:3% 0;
+		width:80%;
+	}
+}
