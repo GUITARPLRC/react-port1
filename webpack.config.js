@@ -1,0 +1,68 @@
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+
+var config = {
+	entry: './app/index.js',
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'index_bundle.js',
+		publicPath: '/'
+	},
+	module: {
+		rules: [
+			{ test: /\.(js)$/, use: 'babel-loader' },
+			{ test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
+			{
+		    test: /\.(gif|png|jpe?g|svg)$/i,
+		    use: [
+		      'file-loader',
+		      {
+		        loader: 'image-webpack-loader',
+						options: {
+			        query: {
+			          progressive: true,
+			          optimizationLevel: 7,
+			          interlaced: false,
+			          pngquant: {
+			            quality: '90-100',
+			            speed: 4
+			          },
+								mozjpeg: {
+									progressive: true,
+								},
+								gifsicle: {
+									interlaced: true,
+								},
+								optipng: {
+									optimizationLevel: 7,
+								}
+			        }
+						}
+		      }
+		    ]
+		  }
+		]
+	},
+	devServer: {
+		historyApiFallback: true
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: "app/index.html"
+		})
+	]
+}
+
+if (process.env.NODE_ENV === 'production') {
+	config.plugins.push(
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin()
+	)
+}
+
+module.exports = config
