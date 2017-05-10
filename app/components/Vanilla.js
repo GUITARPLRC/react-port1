@@ -1,16 +1,16 @@
 var React = require('react');
 
-import music from '../images/music_maker.png';
-import quiz from '../images/quiz.png';
+import music from '../images/music.jpg';
+import quiz from '../images/quiz.jpg';
 import magic from '../images/magic8.png';
-import hangman from '../images/hangman.png';
+import hangman from '../images/hangman.jpg';
 
 class Vanilla extends React.Component {
 	render() {
 		return (
 			<div className="projects">
 				<h2>Vanilla JavaScript Projects</h2>
-				<p>The projects here are all written with vanilla JavaScript</p>
+				<p>The projects shown here are all written with vanilla JavaScript</p>
 				<div className="items">
 					<div>
 						<img src={music} alt="pic of music maker project" />

@@ -1,17 +1,16 @@
 var React = require('react');
 
-import movie from '../images/movie.png';
-import markdown from '../images/markdown.png';
-import recipe from '../images/recipe.png';
+import movie from '../images/movie.jpg';
+import markdown from '../images/markdown.jpg';
+import recipe from '../images/recipe.jpg';
 import github from '../images/github.png';
-import leaderboard from '../images/leaderboard.png';
 
 class ReactProjects extends React.Component {
 	render() {
 		return (
 			<div className="projects">
 				<h2>React Projects</h2>
-				<p>All projects here are created using the React library</p>
+				<p>All projects in this section are created using the React library, including this site which uses React Router and Material-UI</p>
 				<div className='items'>
 					<div>
 						<img src={movie} alt="pic of movie project" />

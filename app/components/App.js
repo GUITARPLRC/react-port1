@@ -22,8 +22,8 @@ class App extends React.Component {
 							<Nav />
 							<Switch>
 								<Route exact path='/' component={Home} />
-								<Route exact path='/projects' component={Projects} />
-								<Route exact path='/contact' component={Contact} />
+								<Route path='/projects' component={Projects} />
+								<Route path='/contact' component={Contact} />
 								<Route render={function() {
 									return (
 										<div>

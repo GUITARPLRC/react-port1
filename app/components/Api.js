@@ -1,10 +1,9 @@
 var React = require('react');
 
-import wiki from '../images/wiki.png';
-import weather from '../images/weather.png';
-import twitch from '../images/twitch.png';
-import github from '../images/github.png';
-import leaderboard from '../images/leaderboard.png';
+import wiki from '../images/wiki.jpg';
+import weather from '../images/weather.jpg';
+import twitch from '../images/twitch.jpg';
+import leaderboard from '../images/leaderboard.jpg';
 
 class Api extends React.Component {
 	render() {
