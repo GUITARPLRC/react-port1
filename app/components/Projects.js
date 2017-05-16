@@ -17,24 +17,24 @@ class Projects extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			whichOne: null
+			whichCategory: null
 		}
 
 		this.toggleShow = this.toggleShow.bind(this);
 	}
 
 	toggleShow(name) {
-		if (this.state.whichOne == name) {
-			this.setState({ whichOne: null })
+		if (this.state.whichCategory == name) {
+			this.setState({ whichCategory: null })
 		} else {
-			this.setState({ whichOne: name })
+			this.setState({ whichCategory: name })
 		}
 	}
 
 	render() {
 		return (
 			<div>
-				<Paper zDepth={5} style={{margin:'3% auto 0 auto', padding:50, width: '80%'}}>
+				<Paper id="projectsIntro" zDepth={5} style={{margin:'3% auto 0 auto', padding:50, width: '80%'}}>
 					<h2>Here is a list of categories of my projects</h2>
 					<p>Click a button to show projects in a selected category</p>
 					<p>Click each example for more info!</p>
@@ -52,11 +52,11 @@ class Projects extends React.Component {
 					</RaisedButton>
 				</Paper>
 
-				{this.state.whichOne == 'layout' && <Layouts />}
-				{this.state.whichOne == 'api' && <Api />}
-				{this.state.whichOne == 'react' && <ReactProjects />}
-				{this.state.whichOne == 'd3' && <D3Projects />}
-				{this.state.whichOne == 'vanilla' && <Vanilla />}
+				{this.state.whichCategory == 'layout' && <Layouts />}
+				{this.state.whichCategory == 'api' && <Api />}
+				{this.state.whichCategory == 'react' && <ReactProjects />}
+				{this.state.whichCategory == 'd3' && <D3Projects />}
+				{this.state.whichCategory == 'vanilla' && <Vanilla />}
 			</div>
 		)
 	}

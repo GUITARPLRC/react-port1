@@ -10,6 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 var Nav = require('./Nav');
 var Home = require('./Home');
 var Projects = require('./Projects');
+var ProjectDetails = require('./ProjectDetails');
 var Contact = require('./Contact');
 
 class App extends React.Component {
@@ -22,7 +23,8 @@ class App extends React.Component {
 							<Nav />
 							<Switch>
 								<Route exact path='/' component={Home} />
-								<Route path='/projects' component={Projects} />
+								<Route exact path='/projects' component={Projects} />
+								<Route path='/projects/details' component={ProjectDetails} />
 								<Route path='/contact' component={Contact} />
 								<Route render={function() {
 									return (
