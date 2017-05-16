@@ -1,13 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
-	/*
-	background-image:url('https://unsplash.it/1920/1080?image=484');
-	background-position:center center;
-	background-repeat: no-repeat;
-	background-size:cover;
-	*/
 	background-color:#00796B;
 	color:#fff;
-	font-family:Roboto, sans-serif;
+	font-family:'Roboto', sans-serif;
 	letter-spacing:2px;
 	margin:0 0 3% 0;
 	min-height:92vh;
@@ -161,6 +157,15 @@ a {
 	margin:10% auto 0 auto;
 	padding:50px;
 	width:60%;
+}
+
+.details {
+	margin:3% auto 0;
+	max-width:960px;
+	text-align:center;
+}
+.details img {
+	border-radius:10px;
 }
 
 @media (max-width:768px) {
