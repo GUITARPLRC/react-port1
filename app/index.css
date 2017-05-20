@@ -166,6 +166,7 @@ a {
 }
 .details img {
 	border-radius:10px;
+	max-width:90%;
 }
 
 @media (max-width:768px) {
