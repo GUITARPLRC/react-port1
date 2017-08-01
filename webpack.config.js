@@ -13,35 +13,7 @@ var config = {
 		rules: [
 			{ test: /\.(js)$/, use: 'babel-loader' },
 			{ test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
-			{
-		    test: /\.(gif|png|jpe?g|svg)$/i,
-		    use: [
-		      'file-loader',
-		      {
-		        loader: 'image-webpack-loader',
-						options: {
-			        query: {
-			          progressive: true,
-			          optimizationLevel: 7,
-			          interlaced: false,
-			          pngquant: {
-			            quality: '90-100',
-			            speed: 4
-			          },
-								mozjpeg: {
-									progressive: true,
-								},
-								gifsicle: {
-									interlaced: true,
-								},
-								optipng: {
-									optimizationLevel: 7,
-								}
-			        }
-						}
-		      }
-		    ]
-		  }
+			{ test: /\.(gif|png|jpe?g|svg)$/i, use: 'file-loader'}
 		]
 	},
 	devServer: {
