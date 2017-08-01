@@ -1,8 +1,5 @@
-var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import mui from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -16,7 +13,7 @@ var Contact = require('./Contact');
 class App extends React.Component {
 	render() {
 		return (
-			<Router>
+			<BrowserRouter>
 				<div className='container'>
 					<MuiThemeProvider>
 						<div className='app'>
@@ -38,7 +35,7 @@ class App extends React.Component {
 						</div>
 					</MuiThemeProvider>
 				</div>
-			</Router>
+			</BrowserRouter>
 		)
 	}
 }

@@ -1,5 +1,5 @@
-var React = require('react');
-var me = require('../images/me.png');
+import React from 'react';
+import me from '../images/me.png';
 
 import html from '../images/html.png';
 import css from '../images/css.png';

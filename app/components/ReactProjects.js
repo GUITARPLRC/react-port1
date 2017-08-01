@@ -1,10 +1,10 @@
-var React = require('react');
-var Link = require('react-router-dom').Link;
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import movie from '../images/movie.jpg';
 import markdown from '../images/markdown.jpg';
 import recipe from '../images/recipe.jpg';
-import github from '../images/github.png';
+import gameoflife from '../images/gameoflife.jpg';
 
 class ReactProjects extends React.Component {
 	constructor() {
@@ -57,16 +57,16 @@ class ReactProjects extends React.Component {
 
 					<Link to={{
 						pathname: '/projects/details',
-						search: `?github`
+						search: `?gameoflife`
 					}}>
 						<div>
-							<img src={github} alt="pic of github battle project" />
+							<img src={gameoflife} alt="pic of game of life project" />
 							<div className="text">
-								<h3>Github Battle</h3>
+								<h3>Conway's Game of Life</h3>
 							</div>
 						</div>
 					</Link>
-					
+
 				</div>
 			</div>
 		)

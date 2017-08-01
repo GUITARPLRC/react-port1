@@ -1,5 +1,5 @@
-var React = require('react');
-var Link = require('react-router-dom').Link;
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { RaisedButton } from 'material-ui';
 

@@ -1,6 +1,6 @@
-var React = require('react');
-var NavLink = require('react-router-dom').NavLink;
-var logo = require('../images/myLogo.png');
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../images/myLogo.png';
 
 import { AppBar, Drawer, MenuItem } from 'material-ui';
 

@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';

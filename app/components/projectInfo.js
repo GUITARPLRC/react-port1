@@ -1,7 +1,7 @@
 import movie from '../images/movie.jpg';
 import markdown from '../images/markdown.jpg';
 import recipe from '../images/recipe.jpg';
-import github from '../images/github.png';
+import gameoflife from '../images/gameoflife.jpg';
 import music from '../images/music.jpg';
 import quiz from '../images/quiz.jpg';
 import magic from '../images/magic8.png';
@@ -31,17 +31,16 @@ module.exports = {
 	recipe: {
 		title: "Recipe List",
 		info: "This was my first project with React and was part of the Free Code Camp curriculum. Since it was my first time using React, the hardest" +
-		" part was the whole project. Learning about data-flow, state, ...everything.",
+			" part was the whole project. Learning about data-flow, state, ...everything.",
 		tools: ["HTML/CSS", "Javascript (local storage)", "React"],
 		image: recipe
 	},
-	github: {
-		title: "Github Battle",
-		info: "Although I did not come up with the idea, it's from an online tutorial, I did code everything from beginning to end." +
-			" The hardest part of this project was using React Router and understanding the basics of how it is used." +
-			" This was my first time using React Router and has really opened my eyes on the benefits of using it.",
-		tools: ["HTML/CSS", "Github API", "React", "React Router"],
-		image: github
+	gameoflife: {
+		title: "Conway's Game of Life",
+		info: "This was my first project using Redux. The Flux/Redux concept was not really hard to understand, but implementing the concept proved to " +
+			"be the hard part. One issue I ran into, with this project, was deep cloning an object to reference as previous state, but I quickly found a way to do this.",
+		tools: ["HTML/CSS", "React", "Redux"],
+		image: gameoflife
 	},
 	music: {
 		title: "Music Maker",

@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 import { Paper, RaisedButton } from 'material-ui';
 
 import jqueryIcon from '../images/jquery-icon.png';
