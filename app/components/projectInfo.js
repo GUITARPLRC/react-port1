@@ -4,7 +4,7 @@ import recipe from '../images/recipe.jpg';
 import gameoflife from '../images/gameoflife.jpg';
 import music from '../images/music.jpg';
 import quiz from '../images/quiz.jpg';
-import magic from '../images/magic8.png';
+import magic from '../images/magic8.jpg';
 import hangman from '../images/hangman.jpg';
 import wiki from '../images/wiki.jpg';
 import weather from '../images/weather.jpg';

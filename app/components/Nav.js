@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/myLogo.png';
+import logo from '../images/myLogo.jpg';
 
 import { AppBar, Drawer, MenuItem } from 'material-ui';
 

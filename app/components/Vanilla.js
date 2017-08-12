@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import music from '../images/music.jpg';
 import quiz from '../images/quiz.jpg';
-import magic from '../images/magic8.png';
+import magic from '../images/magic8.jpg';
 import hangman from '../images/hangman.jpg';
 
 class Vanilla extends React.Component {
