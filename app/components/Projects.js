@@ -1,10 +1,9 @@
 import React from 'react'
 import { Paper, RaisedButton } from 'material-ui';
 
-import jqueryIcon from '../images/jquery-icon.png';
-import reactIcon from '../images/react-icon.png';
-import d3 from '../images/d3-icon.png';
-import js from '../images/js.png';
+import reactIcon from '../images/react.jpg';
+import d3 from '../images/d3.jpg';
+import js from '../images/js.jpg';
 
 import Api from './Api';
 import ReactProjects from './ReactProjects';
@@ -38,18 +37,10 @@ class Projects extends React.Component {
 					<h2>Here is a list of categories of my projects</h2>
 					<p>Click a button to show projects in a selected category</p>
 					<p>Click each example for more info!</p>
-					<RaisedButton label="React" labelPosition="before" onClick={() => { this.toggleShow('react') }}>
-						<img src={reactIcon} id="react" style={{color:'white',margin:'-3px 0 0 -10px',width:30}} />
-					</RaisedButton>
-					<RaisedButton label="D3.js" labelPosition="before" onClick={() => { this.toggleShow('d3') }}>
-						<img src={d3} id="d3" style={{margin:'-3px 10px 0 0', width:15}} />
-					</RaisedButton>
-					<RaisedButton label="API" labelPosition="before" onClick={() => { this.toggleShow('api') }}>
-						<i className="fa fa-code" aria-hidden="true"></i>
-					</RaisedButton>
-					<RaisedButton label="Vanilla JS" labelPosition="before" onClick={() => { this.toggleShow('vanilla') }}>
-						<img src={js} id="vanilla" style={{color:'white',margin:'-3px 10px 0 -5px',width:20}} />
-					</RaisedButton>
+					<RaisedButton label="React" labelPosition="before" onClick={() => { this.toggleShow('react') }} />
+					<RaisedButton label="D3.js" labelPosition="before" onClick={() => { this.toggleShow('d3') }} />
+					<RaisedButton label="API" labelPosition="before" onClick={() => { this.toggleShow('api') }} />
+					<RaisedButton label="Vanilla JS" labelPosition="before" onClick={() => { this.toggleShow('vanilla') }} />
 				</Paper>
 
 				{this.state.whichCategory == 'layout' && <Layouts />}

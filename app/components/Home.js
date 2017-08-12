@@ -1,11 +1,15 @@
 import React from 'react';
 import me from '../images/me.png';
 
-import html from '../images/html.png';
-import css from '../images/css.png';
-import js from '../images/js.png';
-import jquery from '../images/jquery.png';
-import reactIcon from '../images/react-icon.png';
+import html from '../images/html.jpg';
+import css from '../images/css.jpg';
+import js from '../images/js.jpg';
+import reactIcon from '../images/react.jpg';
+
+import mongo from '../images/mongo.jpg';
+import node from '../images/node.jpg';
+import express from '../images/express.jpg'
+import d3 from '../images/d3.jpg';
 
 import { RaisedButton } from 'material-ui';
 
@@ -22,7 +26,7 @@ class Home extends React.Component {
 				<span><a href="mailto:guitarplrc@yahoo.com"> HERE.</a></span></p>
 				<RaisedButton label="Download Resume" primary={true} href="./ChuckReynoldsResume.pdf" download />
 				<div className='skills'>
-					<h2>Core Skills</h2>
+					<h2>Skills</h2>
 					<div className="eachSkill">
 						<div>
 							<img src={html} alt='html icon' />
@@ -34,15 +38,29 @@ class Home extends React.Component {
 						</div>
 						<div>
 							<img src={js} alt='javacript icon' />
-							<p>Javascript</p>
+							<p>JavaScript</p>
 						</div>
 						<div>
-							<img src={jquery} alt='jquery icon' />
-							<p>jQuery</p>
+							<img src={reactIcon} alt='react icon' />
+							<p>React.js</p>
+						</div>
+					</div>
+					<div className="eachSkill">
+						<div>
+							<img src={d3} alt='d3 icon' />
+							<p>D3.js</p>
 						</div>
 						<div>
-							<img src={reactIcon} alt='react icon' style={{height:'128px'}} />
-							<p>React</p>
+							<img src={node} alt='node icon' />
+							<p>Node.js</p>
+						</div>
+						<div>
+							<img src={express} alt='express icon' />
+							<p>Express.js</p>
+						</div>
+						<div>
+							<img src={mongo} alt='mongo' />
+							<p>MongoDB</p>
 						</div>
 					</div>
 				</div>
