@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import movie from '../images/movie.jpg';
-import markdown from '../images/markdown.jpg';
+import dungeon from '../images/dungeon.jpg';
 import recipe from '../images/recipe.jpg';
 import gameoflife from '../images/gameoflife.jpg';
 
@@ -33,12 +33,12 @@ class ReactProjects extends React.Component {
 
 					<Link to={{
 						pathname: '/projects/details',
-						search: `?markdown`
+						search: `?dungeon`
 					}}>
 						<div>
-							<img src={markdown} alt="pic of markdown project" />
+							<img src={dungeon} alt="pic of dungeon project" />
 							<div className="text">
-								<h3>Markdown Preview</h3>
+								<h3>Dungeon of Doom</h3>
 							</div>
 						</div>
 					</Link>
