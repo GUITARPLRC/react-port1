@@ -1,0 +1,22 @@
+{
+	"short_name": "Reynolds FED",
+	"name": "Chuck Reynolds | Front End Developer",
+	"icons": [
+		{
+			"src": "myIcon.jpg",
+			"type": "image/jpg",
+			"sizes": "48x48"
+		},
+		{
+			"src": "myIcon.jpg",
+			"type": "image/jpg",
+			"sizes": "96x96"
+		},
+		{
+			"src": "myIcon.jpg",
+			"type": "image/jpg",
+			"sizes": "192x192"
+		}
+	],
+	"start_url": "/?utm_source=homescreen"
+}
