@@ -1,75 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-	background-color:#00796B;
-	color:#fff;
-	font-family:'Roboto', sans-serif;
-	letter-spacing:2px;
-	margin:0 0 3% 0;
-	overflow-x:hidden;
+	background-color: #00796b;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2px;
+	margin: 0 0 3% 0;
+	overflow-x: hidden;
 }
 
 ul {
-	padding:0;
+	padding: 0;
 }
 
 li {
-	list-style-type:none;
+	list-style-type: none;
 }
 
 a {
-	color:#ddd;
-	text-decoration:none;
-	transition:all 0.3s;
+	color: #c4ffc2;
+	text-decoration: none;
+	transition: all 0.3s;
 }
 .row {
-	display:flex;
-	justify-content:space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .column {
-	display:flex;
-	flex-direction:column;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
 .column input {
-	border-radius:3px;
-	margin:10px 0;
-	padding:5px;
-	border:1px solid rgba(0,0,0,0.43);
-	font-size:16px;
-	width:80%;
+	border-radius: 3px;
+	margin: 10px 0;
+	padding: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.43);
+	font-size: 16px;
+	width: 80%;
 }
 
 .column label {
-	text-align:center;
-	font-size:30px;
-	font-weight:200;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 200;
 }
 
 .header {
-	text-align:center;
-	font-size:30px;
-	font-weight:200;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 200;
 }
 
 .container {
-	margin:0 auto;
+	margin: 0 auto;
 }
 
 #logo {
-	border-radius:50%;
-	margin:20px;
+	border-radius: 50%;
+	margin: 20px;
 }
 
 .social {
-	margin:10px 0 0 15px;
+	margin: 10px 0 0 15px;
 }
 
 .social a {
-	color:#000;
-	transition:color 0.3s;
+	color: #000;
+	transition: color 0.3s;
 }
 
 .social a:hover {
@@ -77,119 +77,121 @@ a {
 }
 
 .social a:nth-child(2) {
-	margin:0 0 0 15px;
+	margin: 0 0 0 15px;
 }
 
-.fa-files-o, .fa-code {
-	color:rgb(82, 169, 238);
+.fa-files-o,
+.fa-code {
+	color: rgb(82, 169, 238);
 }
 
-#jquery, #react, #d3, #vanilla {
-	vertical-align:middle;
+#jquery,
+#react,
+#d3,
+#vanilla {
+	vertical-align: middle;
 }
-
 
 #home {
-	padding:0 3%;
-	text-align:center;
+	padding: 0 3%;
+	text-align: center;
 }
 #home a:hover {
-	color:#000;
+	color: #000;
 }
 .skills {
-	margin:2% auto 0 auto;
-	padding:1% 2% 1% 0;
-	text-align:center;
-	width:50%;
+	margin: 2% auto 0 auto;
+	padding: 1% 2% 1% 0;
+	text-align: center;
+	width: 50%;
 }
 .skills h2 {
-	font-size:30px;
-	margin:0 0 2% 0;
+	font-size: 30px;
+	margin: 0 0 2% 0;
 }
 .skills .eachSkill {
-	display:flex;
-	justify-content:space-around;
+	display: flex;
+	justify-content: space-around;
 }
 .skills .eachSkill img {
-	border-radius:50%;
-	width:100px;
+	border-radius: 50%;
+	width: 100px;
 }
 .skills .eachSkill p {
-	font-size:24px;
+	font-size: 24px;
 }
-
 
 .projects {
-	color:#fff;
-	text-align:center;
+	color: #fff;
+	text-align: center;
 }
-.items{
-	display:flex;
-	justify-content:space-around;
+.items {
+	display: flex;
+	justify-content: space-around;
 }
 .items div {
-	border-radius:10px;
-	max-height:250px;
-	overflow:hidden;
-	position:relative;
-	transition:0.3s ease;
-	width:23vw;
+	border-radius: 10px;
+	max-height: 250px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.3s ease;
+	width: 23vw;
 }
 .items div img {
-	border-radius:10px;
-	height:250px;
-	transition:0.3s ease;
-	width:23vw;
+	border-radius: 10px;
+	height: 250px;
+	transition: 0.3s ease;
+	width: 23vw;
 }
 .items div .text {
-	border-radius:10px;
-	left:50%;
-	opacity:0;
-	padding:0 10px;
-	position:absolute;
-	top:50%;
+	border-radius: 10px;
+	left: 50%;
+	opacity: 0;
+	padding: 0 10px;
+	position: absolute;
+	top: 50%;
 	transform: translate(-50%, -50%);
 }
 .items div:hover img {
-	opacity:0.3;
-	transform:scale(1.3);
+	opacity: 0.3;
+	transform: scale(1.3);
 }
 .items div:hover .text {
-	opacity:0.9;
+	opacity: 0.9;
 }
 
 #contact {
-	margin:10% auto 0 auto;
-	padding:50px;
-	width:60%;
+	margin: 10% auto 0 auto;
+	padding: 50px;
+	width: 60%;
 }
 
 .details {
-	margin:3% auto 0;
-	max-width:960px;
-	text-align:center;
+	margin: 3% auto 0;
+	max-width: 960px;
+	text-align: center;
 }
 .details img {
-	border-radius:10px;
-	max-width:90%;
+	border-radius: 10px;
+	max-width: 90%;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 	#contact {
-		padding:25px;
-		width:80%;
+		padding: 25px;
+		width: 80%;
 	}
 	.skills .eachSkill {
-		display:block;
+		display: block;
 	}
-	.items{
-		display:block;
+	.items {
+		display: block;
 	}
 	.items div {
-		margin:2% auto;
-		width:80vw;
+		margin: 2% auto;
+		width: 80vw;
 	}
 	.items div img {
-		width:80vw;
+		width: 80vw;
 	}
 }

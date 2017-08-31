@@ -1,21 +1,45 @@
 {
 	"short_name": "Reynolds FED",
 	"name": "Chuck Reynolds | Front End Developer",
+	"theme_color": "#00796B",
+	"background_color": "#00796B",
+	"display": "standalone",
+	"orientation": "portrait",
 	"icons": [
 		{
-			"src": "myIcon.jpg",
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
 			"type": "image/jpg",
 			"sizes": "48x48"
 		},
 		{
-			"src": "myIcon.jpg",
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
 			"type": "image/jpg",
 			"sizes": "96x96"
 		},
 		{
-			"src": "myIcon.jpg",
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
 			"type": "image/jpg",
 			"sizes": "192x192"
+		},
+		{
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
+			"sizes": "192x192",
+			"type": "image/jpg"
+		},
+		{
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
+			"sizes": "256x256",
+			"type": "image/jpg"
+		},
+		{
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
+			"sizes": "384x384",
+			"type": "image/jpg"
+		},
+		{
+			"src": "251cfc435b67ada3ace672834fff4365.jpg",
+			"sizes": "512x512",
+			"type": "image/jpg"
 		}
 	],
 	"start_url": "/?utm_source=homescreen"
