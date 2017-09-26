@@ -10,16 +10,16 @@ class ProjectDetails extends React.Component {
 		super(props);
 		this.state = {
 			project: this.props.location.search
-		}
+		};
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick() {
-		window.location = `http://chuckreynolds.altervista.org/${this.state.project.slice(1)}/index.html`;
+		let title = this.state.project.slice(1);
+		window.location = projectInfo[title].link;
 	}
 
 	render() {
-
 		var project = this.state.project.slice(1);
 
 		return (
@@ -30,15 +30,13 @@ class ProjectDetails extends React.Component {
 				<h3>Tools:</h3>
 				<ul>
 					{projectInfo[project].tools.map(function(each) {
-						return (
-							<li key={each}>{each}</li>
-						)
+						return <li key={each}>{each}</li>;
 					})}
 				</ul>
-				<RaisedButton label="Open App" primary={true} onClick={this.handleClick} />
+				<RaisedButton label="Click Here To Open App" primary={true} onClick={this.handleClick} />
 			</div>
-		)
+		);
 	}
 }
 
-module.exports = ProjectDetails
+module.exports = ProjectDetails;
