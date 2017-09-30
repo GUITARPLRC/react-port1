@@ -30,7 +30,7 @@ class Home extends React.Component {
 				<p>
 					If you are a business seeking a web presence or an employer looking to hire, you can email me
 					<span>
-						<a href="mailto:guitarplrc@yahoo.com"> HERE.</a>
+						<a href="mailto:chuck@chuckreynolds.tech"> HERE.</a>
 					</span>
 				</p>
 				<RaisedButton label="Download Resume" primary={true} href="./ChuckReynoldsResume.pdf" download />
