@@ -11,6 +11,8 @@ import heatmap from '../images/heatmap.jpg';
 import force from '../images/force.jpg';
 import scatterplot from '../images/scatterplot.jpg';
 import games from '../images/games.jpg';
+
+import timestamp from '../images/timestamp.jpg';
 import wiki from '../images/wiki.jpg';
 import weather from '../images/weather.jpg';
 import twitch from '../images/twitch.jpg';
@@ -22,7 +24,10 @@ class Projects extends React.Component {
 	render() {
 		return (
 			<div>
-				<Paper id="projectsIntro" zDepth={5} style={{ margin: '3% auto 0 auto', padding: 50, width: '80%' }}>
+				<Paper
+					id="projectsIntro"
+					zDepth={5}
+					style={{ backgroundColor: '#ccc', margin: '3% auto 0 auto', padding: 50, width: '80%' }}>
 					<h2>Projects</h2>
 					<p>
 						Here is a list of some of my current projects. Click on an image to get more info and to see the project
@@ -152,6 +157,19 @@ class Projects extends React.Component {
 									<img src={games} alt="pic of games project" />
 									<div className="text">
 										<h3>Game Search</h3>
+									</div>
+								</div>
+							</Link>
+
+							<Link
+								to={{
+									pathname: '/projects/details',
+									search: `?timestamp`
+								}}>
+								<div>
+									<img src={timestamp} alt="pic of timestamp project" />
+									<div className="text">
+										<h3>Timestamp Service</h3>
 									</div>
 								</div>
 							</Link>

@@ -162,10 +162,10 @@ a {
 	margin: 0 30px;
 	-webkit-transition: 0.3s ease;
 	transition: 0.3s ease;
-	width: 300px;
+	width: 80%;
+	max-width: 300px;
 }
 .items div .text {
-	border-radius: 10px;
 	left: 50%;
 	opacity: 0;
 	padding: 0 10px;
@@ -176,11 +176,11 @@ a {
 }
 .items div:hover img {
 	opacity: 0.3;
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 .items div:hover .text {
-	opacity: 0.95;
+	opacity: 1;
 }
 
 #contact {
@@ -198,6 +198,18 @@ a {
 	border-radius: 10px;
 	max-width: 90%;
 }
+@media (max-width: 1200px) {
+	.items {
+		display: block;
+	}
+	.items div {
+		margin: 2% auto;
+		width: 90%;
+	}
+	.items div img {
+		width: 90%;
+	}
+}
 
 @media (max-width: 768px) {
 	#contact {
@@ -206,15 +218,5 @@ a {
 	}
 	.skills .eachSkill {
 		display: block;
-	}
-	.items {
-		display: block;
-	}
-	.items div {
-		margin: 2% auto;
-		width: 80vw;
-	}
-	.items div img {
-		width: 80vw;
 	}
 }
