@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 
+var inProduction = process.env.NODE_ENV === 'production';
+
 let config = {
+	devtool: 'cheap-eval-source-map',
 	entry: './app/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -12,9 +15,9 @@ let config = {
 	},
 	module: {
 		rules: [
-			{ test: /\.(js)$/, use: 'babel-loader' },
-			{ test: /\.css$/, use: ['style-loader', 'css-loader'] },
-			{ test: /\.(gif|png|jpe?g|svg)$/i, use: 'file-loader' }
+			{ test: /\.(js)$/, exclude: /node_modules/, loader: 'babel-loader' },
+			{ test: /\.css$/, loader: ['style-loader', 'css-loader'] },
+			{ test: /\.(gif|png|jpe?g|svg)$/i, loaders: ['file-loader?limit=10000', 'img-loader'] }
 		]
 	},
 	devServer: {
@@ -35,11 +38,14 @@ let config = {
 				minifyCSS: true,
 				minifyURLs: true
 			}
+		}),
+		new webpack.LoaderOptionsPlugin({
+			minimize: inProduction
 		})
 	]
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (inProduction) {
 	config.plugins.push(
 		new webpack.DefinePlugin({
 			'process.env': {

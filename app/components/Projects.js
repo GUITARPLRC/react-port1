@@ -27,12 +27,14 @@ class Projects extends React.Component {
 				<Paper
 					id="projectsIntro"
 					zDepth={5}
-					style={{ backgroundColor: '#ccc', margin: '3% auto 0 auto', padding: 50, width: '80%' }}>
-					<h2>Projects</h2>
-					<p>
-						Here is a list of some of my current projects. Click on an image to get more info and to see the project
-						live!
-					</p>
+					style={{ backgroundColor: '#ccc', margin: '3% auto 0 auto', padding: 20, width: '80%' }}>
+					<div style={{ textAlign: 'center' }}>
+						<h2>Projects</h2>
+						<p>
+							Here is a list of some of my current projects. Click on an image to get more info and to see the project
+							live!
+						</p>
+					</div>
 					<h3>React.js</h3>
 					<div className="projects">
 						<div className="items">

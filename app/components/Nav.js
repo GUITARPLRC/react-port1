@@ -39,7 +39,8 @@ class Nav extends React.Component {
 								style={{
 									borderRadius: 50,
 									width: 50,
-									height: 50
+									height: 50,
+									margin: '-2px 0 0 0'
 								}}
 							/>
 						</a>
