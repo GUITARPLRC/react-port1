@@ -1,12 +1,13 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression');
 const webpack = require('webpack');
 
 var inProduction = process.env.NODE_ENV === 'production';
 
 let config = {
-	devtool: 'cheap-eval-source-map',
+	devtool: 'source-map',
 	entry: './app/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -16,8 +17,14 @@ let config = {
 	module: {
 		rules: [
 			{ test: /\.(js)$/, exclude: /node_modules/, loader: 'babel-loader' },
-			{ test: /\.css$/, loader: ['style-loader', 'css-loader'] },
-			{ test: /\.(gif|png|jpe?g|svg)$/i, loaders: ['file-loader?limit=10000', 'img-loader'] }
+			{
+				test: /\.css$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: 'css-loader'
+				})
+			},
+			{ test: /\.(gif|png|jpe?g|svg)$/i, loaders: ['file-loader', 'img-loader'] }
 		]
 	},
 	devServer: {
@@ -39,6 +46,7 @@ let config = {
 				minifyURLs: true
 			}
 		}),
+		new ExtractTextPlugin('index.css'),
 		new webpack.LoaderOptionsPlugin({
 			minimize: inProduction
 		})
@@ -66,6 +74,7 @@ if (inProduction) {
 			}
 		}),
 		new CompressionPlugin({
+			text: /\.js/,
 			asset: '[path].gz[query]',
 			algorithm: 'gzip',
 			test: /\.js$|\.css$|\.html$/,
