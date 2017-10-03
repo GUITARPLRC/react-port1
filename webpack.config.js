@@ -7,12 +7,16 @@ const webpack = require('webpack');
 var inProduction = process.env.NODE_ENV === 'production';
 
 let config = {
-	devtool: 'source-map',
-	entry: './app/index.js',
+	devtool: inProduction ? 'hidden-source-map' : 'source-map',
+	entry: {
+		app: './app/index.js',
+		vendor: ['react', 'material-ui']
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'index_bundle.js',
-		publicPath: '/'
+		filename: '[name].js',
+		publicPath: '/',
+		devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
 	},
 	module: {
 		rules: [
@@ -49,6 +53,10 @@ let config = {
 		new ExtractTextPlugin('index.css'),
 		new webpack.LoaderOptionsPlugin({
 			minimize: inProduction
+		}),
+		new webpack.optimize.CommonsChunkPlugin('vendor'),
+		new webpack.EnvironmentPlugin({
+			NODE_ENV: 'development'
 		})
 	]
 };
