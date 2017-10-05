@@ -77,14 +77,21 @@ a {
 }
 
 .social {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	margin: 10px 0 0 15px;
 }
 
 .social a {
-	margin: 0 10px 0 0;
+	margin: 10px 0;
 }
 .social a svg {
-	width: 30px;
+	width: 35px;
 }
 
 #home {
