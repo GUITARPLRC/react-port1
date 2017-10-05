@@ -2,12 +2,14 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression');
+
 const webpack = require('webpack');
 
 var inProduction = process.env.NODE_ENV === 'production';
 
 let config = {
 	devtool: inProduction ? 'hidden-source-map' : 'source-map',
+	devServer: { overlay: true },
 	entry: {
 		app: './app/index.js',
 		vendor: ['react', 'material-ui']
@@ -20,6 +22,15 @@ let config = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.js$/,
+				enforce: 'pre',
+
+				loader: 'eslint-loader',
+				options: {
+					emitWarning: true
+				}
+			},
 			{ test: /\.(js)$/, exclude: /node_modules/, loader: 'babel-loader' },
 			{
 				test: /\.css$/,
@@ -28,7 +39,10 @@ let config = {
 					use: 'css-loader'
 				})
 			},
-			{ test: /\.(gif|png|jpe?g|svg)$/i, loaders: ['file-loader', 'img-loader'] }
+			{
+				test: /\.(gif|png|jpe?g|svg)$/i,
+				loaders: ['file-loader', 'img-loader']
+			}
 		]
 	},
 	devServer: {

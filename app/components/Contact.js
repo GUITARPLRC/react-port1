@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -27,14 +26,22 @@ class Contact extends React.Component {
 	onSubmit(e) {
 		e.preventDefault();
 
-		if (this.state.name === '' || this.state.email === '' || this.state.message === '') {
-			this.setState({ status: true, statusText: '* Please fill out form completely', statusFontColor: 'red' });
+		if (
+			this.state.name === '' ||
+			this.state.email === '' ||
+			this.state.message === ''
+		) {
+			this.setState({
+				status: true,
+				statusText: '* Please fill out form completely',
+				statusFontColor: 'red'
+			});
 
-			if (this.state.name == '') {
+			if (this.state.name === '') {
 				document.getElementById('name').focus();
-			} else if (this.state.email == '') {
+			} else if (this.state.email === '') {
 				document.getElementById('email').focus();
-			} else if (this.state.message == '') {
+			} else if (this.state.message === '') {
 				document.getElementById('message').focus();
 			}
 
@@ -46,13 +53,21 @@ class Contact extends React.Component {
 				/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 			)
 		) {
-			this.setState({ status: true, statusText: '* Please enter a valid email', statusFontColor: 'red' });
+			this.setState({
+				status: true,
+				statusText: '* Please enter a valid email',
+				statusFontColor: 'red'
+			});
 			document.getElementById('email').focus();
 			return;
 		}
 
-		if (document.getElementById('bot').value != 3) {
-			this.setState({ status: true, statusText: '* I think your answer is wrong...', statusFontColor: 'red' });
+		if (document.getElementById('bot').value !== 3) {
+			this.setState({
+				status: true,
+				statusText: '* I think your answer is wrong...',
+				statusFontColor: 'red'
+			});
 			document.getElementById('bot').focus();
 			return;
 		}
@@ -83,9 +98,14 @@ class Contact extends React.Component {
 			}
 		};
 
-		this.setState({ status: true, statusText: 'Thank you! I will be in contact shortly!', statusFontColor: 'green' });
+		this.setState({
+			status: true,
+			statusText: 'Thank you! I will be in contact shortly!',
+			statusFontColor: 'green'
+		});
 
-		var data = `name=${this.state.name}&email=${this.state.email}&message=${this.state.message}`;
+		var data = `name=${this.state.name}&email=${this.state.email}&message=${this
+			.state.message}`;
 
 		xhr.send(data);
 
@@ -107,9 +127,14 @@ class Contact extends React.Component {
 		return (
 			<Paper id="contact" zDepth={5}>
 				<h2>Get In Touch</h2>
-				<p>Interested in working together? Just want to say 'hi'? Fill out the form below</p>
+				<p>
+					Interested in working together? Just want to say 'hi'? Fill out the
+					form below
+				</p>
 				{this.state.status && (
-					<p style={{ color: this.state.statusFontColor, fontWeight: 600 }}>{this.state.statusText}</p>
+					<p style={{ color: this.state.statusFontColor, fontWeight: 600 }}>
+						{this.state.statusText}
+					</p>
 				)}
 				<TextField
 					id="name"
