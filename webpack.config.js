@@ -9,12 +9,6 @@ var inProduction = process.env.NODE_ENV === 'production';
 
 let config = {
 	devtool: inProduction ? 'hidden-source-map' : 'source-map',
-	devServer: {
-		overlay: {
-			errors: true,
-			warnings: true
-		}
-	},
 	entry: {
 		app: './app/index.js',
 		vendor: ['react', 'material-ui']
@@ -51,6 +45,13 @@ let config = {
 		]
 	},
 	devServer: {
+		contentBase: path.resolve(__dirname, 'dist'),
+		hot: true,
+		open: true,
+		overlay: {
+			warnings: true,
+			errors: true
+		},
 		historyApiFallback: true
 	},
 	plugins: [

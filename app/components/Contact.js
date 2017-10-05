@@ -26,11 +26,7 @@ class Contact extends React.Component {
 	onSubmit(e) {
 		e.preventDefault();
 
-		if (
-			this.state.name === '' ||
-			this.state.email === '' ||
-			this.state.message === ''
-		) {
+		if (this.state.name === '' || this.state.email === '' || this.state.message === '') {
 			this.setState({
 				status: true,
 				statusText: '* Please fill out form completely',
@@ -50,7 +46,7 @@ class Contact extends React.Component {
 
 		if (
 			!this.state.email.match(
-				/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 			)
 		) {
 			this.setState({
@@ -72,7 +68,7 @@ class Contact extends React.Component {
 			return;
 		}
 
-		let xhr = new XMLHttpRequest();
+		const xhr = new XMLHttpRequest();
 
 		xhr.open('POST', './mail.php');
 		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -86,7 +82,7 @@ class Contact extends React.Component {
 				return;
 			}
 
-			var response = JSON.parse(xhr.responseText);
+			const response = JSON.parse(xhr.responseText);
 
 			if (response.message === 0) {
 				this.setState({
@@ -104,8 +100,7 @@ class Contact extends React.Component {
 			statusFontColor: 'green'
 		});
 
-		var data = `name=${this.state.name}&email=${this.state.email}&message=${this
-			.state.message}`;
+		const data = `name=${this.state.name}&email=${this.state.email}&message=${this.state.message}`;
 
 		xhr.send(data);
 
@@ -127,14 +122,9 @@ class Contact extends React.Component {
 		return (
 			<Paper id="contact" zDepth={5}>
 				<h2>Get In Touch</h2>
-				<p>
-					Interested in working together? Just want to say 'hi'? Fill out the
-					form below
-				</p>
+				<p>Interested in working together? Just want to say 'hi'? Fill out the form below</p>
 				{this.state.status && (
-					<p style={{ color: this.state.statusFontColor, fontWeight: 600 }}>
-						{this.state.statusText}
-					</p>
+					<p style={{ color: this.state.statusFontColor, fontWeight: 600 }}>{this.state.statusText}</p>
 				)}
 				<TextField
 					id="name"
@@ -158,7 +148,7 @@ class Contact extends React.Component {
 					id="message"
 					name="message"
 					floatingLabelText="Say Something"
-					multiLine={true}
+					multiLine={'true'}
 					onChange={this.handleMessage}
 					value={this.state.message}
 					style={{ width: '90%' }}
@@ -172,7 +162,7 @@ class Contact extends React.Component {
 					style={{ width: '90%' }}
 				/>
 				<br />
-				<RaisedButton label="Send" primary={true} onClick={this.onSubmit} />
+				<RaisedButton label="Send" primary={'true'} onClick={this.onSubmit} />
 			</Paper>
 		);
 	}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Paper, RaisedButton } from 'material-ui';
-
+import { Paper } from 'material-ui';
 import movie from '../images/movie.jpg';
 import dungeon from '../images/dungeon.jpg';
 import rect from '../images/rect.jpg';
@@ -18,8 +17,6 @@ import weather from '../images/weather.jpg';
 import twitch from '../images/twitch.jpg';
 import leaderboard from '../images/leaderboard.jpg';
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
 function Projects() {
 	return (
 		<div>
@@ -31,12 +28,13 @@ function Projects() {
 					margin: '3% auto 0 auto',
 					padding: 20,
 					width: '80%'
-				}}>
+				}}
+			>
 				<div style={{ textAlign: 'center' }}>
 					<h2>Projects</h2>
 					<p>
-						Here is a list of some of my current projects. Click on an image to
-						get more info and to see the project live!
+						Here is a list of some of my current projects. Click on an image to get more info and to see the project
+						live!
 					</p>
 				</div>
 				<h3>React.js</h3>
@@ -46,7 +44,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?movie`
-							}}>
+							}}
+						>
 							<div>
 								<img src={movie} alt="pic of movie project" />
 								<div className="text">
@@ -59,7 +58,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?dungeon`
-							}}>
+							}}
+						>
 							<div>
 								<img src={dungeon} alt="pic of dungeon project" />
 								<div className="text">
@@ -72,7 +72,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?rect`
-							}}>
+							}}
+						>
 							<div>
 								<img src={rect} alt="pic of layout project" />
 								<div className="text">
@@ -85,7 +86,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?gameoflife`
-							}}>
+							}}
+						>
 							<div>
 								<img src={gameoflife} alt="pic of game of life project" />
 								<div className="text">
@@ -102,7 +104,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?gdp`
-							}}>
+							}}
+						>
 							<div>
 								<img src={gdp} alt="pic of US GDP project" />
 								<div className="text">
@@ -115,7 +118,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?heatmap`
-							}}>
+							}}
+						>
 							<div>
 								<img src={heatmap} alt="pic of heat map project" />
 								<div className="text">
@@ -128,7 +132,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?force`
-							}}>
+							}}
+						>
 							<div>
 								<img src={force} alt="pic of force graph project" />
 								<div className="text">
@@ -141,7 +146,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?scatterplot`
-							}}>
+							}}
+						>
 							<div>
 								<img src={scatterplot} alt="pic of scatterplot project" />
 								<div className="text">
@@ -158,7 +164,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?games`
-							}}>
+							}}
+						>
 							<div>
 								<img src={games} alt="pic of games project" />
 								<div className="text">
@@ -171,7 +178,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?timestamp`
-							}}>
+							}}
+						>
 							<div>
 								<img src={timestamp} alt="pic of timestamp project" />
 								<div className="text">
@@ -188,7 +196,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?wiki`
-							}}>
+							}}
+						>
 							<div>
 								<img src={wiki} alt="pic of wiki project" />
 								<div className="text">
@@ -201,7 +210,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?weather`
-							}}>
+							}}
+						>
 							<div>
 								<img src={weather} alt="pic of weather project" />
 								<div className="text">
@@ -214,7 +224,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?twitch`
-							}}>
+							}}
+						>
 							<div>
 								<img src={twitch} alt="pic of twitch project" />
 								<div className="text">
@@ -227,7 +238,8 @@ function Projects() {
 							to={{
 								pathname: '/projects/details',
 								search: `?leaderboard`
-							}}>
+							}}
+						>
 							<div>
 								<img src={leaderboard} alt="pic of leaderboard project" />
 								<div className="text">
