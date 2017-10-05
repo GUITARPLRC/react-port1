@@ -81,19 +81,10 @@ a {
 }
 
 .social a {
-	color: #000;
 	margin: 0 10px 0 0;
-	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
 }
-
-.social a:hover {
-	color: #666;
-}
-
-.fa-files-o,
-.fa-code {
-	color: rgb(82, 169, 238);
+.social a svg {
+	width: 30px;
 }
 
 #home {

@@ -16,8 +16,7 @@ let config = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].js',
-		publicPath: '/',
-		devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
+		publicPath: '/'
 	},
 	module: {
 		rules: [
