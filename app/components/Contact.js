@@ -148,7 +148,7 @@ class Contact extends React.Component {
 					id="message"
 					name="message"
 					floatingLabelText="Say Something"
-					multiLine={'true'}
+					multiLine
 					onChange={this.handleMessage}
 					value={this.state.message}
 					style={{ width: '90%' }}
@@ -162,7 +162,7 @@ class Contact extends React.Component {
 					style={{ width: '90%' }}
 				/>
 				<br />
-				<RaisedButton label="Send" primary={'true'} onClick={this.onSubmit} />
+				<RaisedButton label="Send" primary onClick={this.onSubmit} />
 			</Paper>
 		);
 	}
