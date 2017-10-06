@@ -29,6 +29,8 @@ a {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
@@ -109,22 +111,22 @@ a {
 }
 .skills {
 	margin: 0 auto;
-	padding: 1% 2% 1% 0;
+	padding: 1% 0;
 	text-align: center;
-	width: 70%;
 }
 .skills h2 {
 	font-size: 30px;
 	margin: 0 0 2% 0;
 }
 .skills .eachSkill {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 70%;
+}
+.skills .eachSkill div {
+	width: 25%;
 }
 .skills .eachSkill div svg {
+	height: 100px;
 	width: 100px;
 }
 .skills .eachSkill p {
@@ -212,8 +214,11 @@ a {
 	}
 }
 
-@media (max-width: 631px) {
+@media (max-width: 790px) {
 	.skills .eachSkill {
 		display: block;
+	}
+	.skills .eachSkill div {
+		margin: 0 auto;
 	}
 }
