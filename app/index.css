@@ -117,7 +117,7 @@ a {
 }
 .skills h2 {
 	font-size: 30px;
-	margin: 0 0 2% 0;
+	margin: 20px 0;
 }
 .skills .eachSkill {
 	margin: 0 auto;
@@ -219,5 +219,6 @@ a {
 	}
 	.skills .eachSkill div {
 		margin: 0 auto;
+		width: 100%;
 	}
 }
