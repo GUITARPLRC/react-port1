@@ -12,8 +12,7 @@
 		"react-dom": "^15.5.4",
 		"react-router-dom": "^4.1.1",
 		"react-tap-event-plugin": "^2.0.1",
-		"url-loader": "^0.6.2",
-		"webfontloader": "^1.6.28"
+		"url-loader": "^0.6.2"
 	},
 	"devDependencies": {
 		"babel-core": "^6.24.1",
