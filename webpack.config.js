@@ -95,10 +95,7 @@ let config = {
 		new webpack.LoaderOptionsPlugin({
 			minimize: inProduction
 		}),
-		new webpack.optimize.CommonsChunkPlugin('vendor'),
-		new webpack.EnvironmentPlugin({
-			NODE_ENV: 'development'
-		})
+		new webpack.optimize.CommonsChunkPlugin('vendor')
 	]
 };
 

@@ -42,14 +42,11 @@
 	},
 	"scripts": {
 		"start": "webpack-dev-server --hot --inline --open --progress --colors",
-		"build": "webpack -p"
+		"build": "SET NODE_ENV=production && webpack -p"
 	},
 	"author": "",
 	"license": "ISC",
 	"babel": {
-		"presets": [
-			"env",
-			"react"
-		]
+		"presets": ["env", "react"]
 	}
 }
