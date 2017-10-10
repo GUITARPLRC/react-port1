@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Paper } from 'material-ui';
+
 import movie from '../images/movie.jpg';
 import dungeon from '../images/dungeon.jpg';
 import rect from '../images/rect.jpg';
@@ -10,7 +11,6 @@ import heatmap from '../images/heatmap.jpg';
 import force from '../images/force.jpg';
 import scatterplot from '../images/scatterplot.jpg';
 import games from '../images/games.jpg';
-
 import timestamp from '../images/timestamp.jpg';
 import wiki from '../images/wiki.jpg';
 import weather from '../images/weather.jpg';

@@ -8,7 +8,7 @@ const webpack = require('webpack');
 var inProduction = process.env.NODE_ENV === 'production';
 
 let config = {
-	devtool: inProduction ? 'hidden-source-map' : 'source-map',
+	devtool: inProduction ? 'hidden-source-map' : 'cheap-module-source-map',
 	entry: {
 		app: './app/index.js',
 		vendor: ['react', 'material-ui']
@@ -66,14 +66,13 @@ let config = {
 		]
 	},
 	devServer: {
+		historyApiFallback: true,
 		contentBase: path.resolve(__dirname, 'dist'),
-		hot: true,
 		open: true,
 		overlay: {
 			warnings: true,
 			errors: true
-		},
-		historyApiFallback: true
+		}
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -103,7 +102,7 @@ if (inProduction) {
 	config.plugins.push(
 		new webpack.DefinePlugin({
 			'process.env': {
-				NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+				NODE_ENV: JSON.stringify('production')
 			}
 		}),
 		new webpack.optimize.UglifyJsPlugin({

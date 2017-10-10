@@ -7,7 +7,7 @@ body {
 	color: #fff;
 	font-family: 'Lato', sans-serif;
 	font-size: 18px;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	margin: 0 0 3% 0;
 	overflow-x: hidden;
 }
@@ -100,6 +100,11 @@ a {
 #home {
 	padding: 0 3%;
 	text-align: center;
+	width: 60%;
+}
+#home img {
+	-webkit-transform: rotate(5deg);
+	        transform: rotate(5deg);
 }
 #home p span a {
 	color: #000;
@@ -111,17 +116,15 @@ a {
 	-webkit-transition: all 0.3 ease-in;
 }
 .skills {
-	margin: 0 auto;
 	padding: 1% 0;
 	text-align: center;
 }
 .skills h2 {
 	font-size: 30px;
-	margin: 20px 0;
+	margin: 50px 0 20px 0;
 }
 .skills .eachSkill {
-	margin: 0 auto;
-	max-width: 70%;
+	max-width: 90%;
 }
 .skills .eachSkill div {
 	width: 25%;
@@ -129,6 +132,8 @@ a {
 .skills .eachSkill div svg {
 	height: 100px;
 	width: 100px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .skills .eachSkill p {
 	font-size: 18px;
@@ -136,6 +141,7 @@ a {
 }
 
 .projects {
+	opacity: 0;
 	text-align: center;
 }
 .items {
@@ -193,6 +199,60 @@ a {
 	border-radius: 10px;
 	max-width: 90%;
 }
+
+.eachSkill svg:hover {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-name: shake;
+	animation-name: shake;
+}
+
+@-webkit-keyframes shake {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	25% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	50% {
+		-webkit-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+	}
+	75% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes shake {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	25% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	50% {
+		-webkit-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+	}
+	75% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
 @media (max-width: 1200px) {
 	.items {
 		display: block;
@@ -221,5 +281,11 @@ a {
 	.skills .eachSkill div {
 		margin: 0 auto;
 		width: 100%;
+	}
+}
+
+@media (max-width: 520px) {
+	#home img {
+		width: 85%;
 	}
 }

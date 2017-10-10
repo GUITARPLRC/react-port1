@@ -5,27 +5,28 @@ import me from '../images/me.jpg';
 
 function Home() {
 	return (
-		<div id="home">
+		<div id="home" className="container">
 			<h1>My Name is Chuck Reynolds and I am a Front End Developer</h1>
 			<img src={me} alt="My Avatar" style={{ borderRadius: '50%' }} />
 			<p>
-				I am currently living outside of Chicago, IL and I have a passion for making web sites and learning about new
-				trends in web development.
+				I am currently living just outside of Chicago, IL and I have a passion for making web sites and learning about
+				new trends in web development. I primarily work within a JavaScript stack, but I also create WordPress sites.
 			</p>
 			<p>
-				When I am away from my computer I enjoy spending time with my wife and 2 kids, playing guitar, watching movies,
-				and playing Xbox.
+				When I am away from my computer I enjoy spending time with my wife and 2 kids, playing 'stairway' on my guitar,
+				watching all kinds of movies, and playing Xbox.
 			</p>
 			<p>
-				If you are a business seeking a web presence or an employer looking to hire, you can email me
+				If you are a business seeking a web presence, looking to update existing content, or an employer looking to
+				hire, you can email me
 				<span>
 					<a href="mailto:chuck@chuckreynolds.tech"> HERE.</a>
 				</span>
 			</p>
 			<RaisedButton label="Download Resume" primary href="./ChuckReynoldsResume.pdf" download />
 			<div className="skills">
-				<h2>Skills</h2>
-				<div className="eachSkill row">
+				<h2>My Toolbox</h2>
+				<div className="eachSkill container row">
 					<div>
 						<svg viewBox="0 0 128 128">
 							<path fill="#E44D26" d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z" />
