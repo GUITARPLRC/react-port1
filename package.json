@@ -4,6 +4,7 @@
 	"description": "my portfolio",
 	"main": "index.js",
 	"dependencies": {
+		"babel-preset-stage-0": "^6.24.1",
 		"material-ui": "^0.17.4",
 		"react": "^16.0.0",
 		"react-dom": "^16.0.0",
@@ -47,6 +48,9 @@
 	"author": "",
 	"license": "ISC",
 	"babel": {
-		"presets": ["env", "react"]
+		"presets": [
+			"env",
+			"react"
+		]
 	}
 }

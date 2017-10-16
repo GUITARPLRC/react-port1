@@ -16,14 +16,8 @@ class Contact extends React.Component {
 			statusText: '',
 			statusFontColor: 'green'
 		};
-
-		this.onSubmit = this.onSubmit.bind(this);
-		this.handleName = this.handleName.bind(this);
-		this.handleEmail = this.handleEmail.bind(this);
-		this.handleMessage = this.handleMessage.bind(this);
-		this.handleBot = this.handleBot.bind(this);
 	}
-	onSubmit(e) {
+	onSubmit = e => {
 		e.preventDefault();
 
 		if (this.state.name === '' || this.state.email === '' || this.state.message === '') {
@@ -58,7 +52,7 @@ class Contact extends React.Component {
 			return;
 		}
 
-		if (document.getElementById('bot').value !== 3) {
+		if (this.state.bot !== 3) {
 			this.setState({
 				status: true,
 				statusText: '* I think your answer is wrong...',
@@ -105,19 +99,19 @@ class Contact extends React.Component {
 		xhr.send(data);
 
 		this.setState({ name: '', email: '', message: '', bot: '' });
-	}
-	handleName(e) {
+	};
+	handleName = e => {
 		this.setState({ name: e.target.value });
-	}
-	handleEmail(e) {
+	};
+	handleEmail = e => {
 		this.setState({ email: e.target.value });
-	}
-	handleMessage(e) {
+	};
+	handleMessage = e => {
 		this.setState({ message: e.target.value });
-	}
-	handleBot(e) {
-		this.setState({ bot: e.target.value });
-	}
+	};
+	handleBot = e => {
+		this.setState({ bot: Number(e.target.value) });
+	};
 	render() {
 		return (
 			<Paper id="contact" zDepth={5}>

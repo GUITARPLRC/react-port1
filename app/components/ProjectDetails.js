@@ -9,13 +9,12 @@ class ProjectDetails extends React.Component {
 		this.state = {
 			project: this.props.location.search
 		};
-		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick() {
+	handleClick = () => {
 		const title = this.state.project.slice(1);
 		window.location = projectInfo[title].link;
-	}
+	};
 
 	render() {
 		const project = this.state.project.slice(1);

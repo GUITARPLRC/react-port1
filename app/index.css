@@ -104,7 +104,7 @@ a {
 }
 #home img {
 	-webkit-transform: rotate(5deg);
-	        transform: rotate(5deg);
+	transform: rotate(5deg);
 }
 #home p span a {
 	color: #000;
@@ -141,7 +141,6 @@ a {
 }
 
 .projects {
-	opacity: 0;
 	text-align: center;
 }
 .items {
