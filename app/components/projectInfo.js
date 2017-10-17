@@ -121,7 +121,7 @@ module.exports = {
 		title: 'Game Search',
 		info:
 			'This was my first real project using Node.js/Express.js. I really wanted to push my knowledge further by creating a full stack app.',
-		tools: ['HTML/CSS', 'Javascript', 'Node.js/Express.js', 'PUG'],
+		tools: ['HTML/CSS', 'Javascript', 'Node.js/Express.js', 'PUG', 'MongoDB'],
 		image: games,
 		link: 'https://mighty-woodland-65549.herokuapp.com/'
 	},

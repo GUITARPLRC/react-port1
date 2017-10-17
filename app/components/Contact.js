@@ -17,6 +17,15 @@ class Contact extends React.Component {
 			statusFontColor: 'green'
 		};
 	}
+
+	componentDidMount() {
+		setTimeout(() => {
+			const el = document.querySelector('.Contact');
+			el.style.transition = 'opacity 1s';
+			el.style.opacity = 1;
+		}, 200);
+	}
+
 	onSubmit = e => {
 		e.preventDefault();
 
@@ -100,21 +109,31 @@ class Contact extends React.Component {
 
 		this.setState({ name: '', email: '', message: '', bot: '' });
 	};
+
+	componentDidUnmount() {
+		this.style.transition = 'opacity 1s';
+		this.style.opacity = 1;
+	}
+
 	handleName = e => {
 		this.setState({ name: e.target.value });
 	};
+
 	handleEmail = e => {
 		this.setState({ email: e.target.value });
 	};
+
 	handleMessage = e => {
 		this.setState({ message: e.target.value });
 	};
+
 	handleBot = e => {
 		this.setState({ bot: Number(e.target.value) });
 	};
+
 	render() {
 		return (
-			<Paper id="contact" zDepth={5}>
+			<Paper id="contact" zDepth={5} className="Contact">
 				<h2>Get In Touch</h2>
 				<p>Interested in working together? Just want to say 'hi'? Fill out the form below</p>
 				{this.state.status && (

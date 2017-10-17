@@ -15,7 +15,15 @@ body {
 ul {
 	padding: 0;
 }
-
+.Home {
+	opacity: 0;
+}
+.Projects {
+	opacity: 0;
+}
+.Contact {
+	opacity: 0;
+}
 li {
 	list-style-type: none;
 }
