@@ -21,14 +21,15 @@ class Projects extends React.Component {
 	componentDidMount() {
 		setTimeout(() => {
 			const el = document.querySelector('.Projects');
-			el.style.transition = 'opacity 1s';
+			el.style.transition = 'opacity 1.5s';
 			el.style.opacity = 1;
 		}, 200);
 	}
 
-	componentDidUnmount() {
-		this.style.transition = 'opacity 1s';
-		this.style.opacity = 1;
+	componentWillUnmount() {
+		const el = document.querySelector('.Projects');
+		el.style.transition = 'opacity 1s';
+		el.style.opacity = 0;
 	}
 
 	render() {

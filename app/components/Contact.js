@@ -26,6 +26,12 @@ class Contact extends React.Component {
 		}, 200);
 	}
 
+	componentWillUnmount() {
+		const el = document.querySelector('.Contact');
+		el.style.transition = 'opacity 1s';
+		el.style.opacity = 0;
+	}
+
 	onSubmit = e => {
 		e.preventDefault();
 
@@ -109,11 +115,6 @@ class Contact extends React.Component {
 
 		this.setState({ name: '', email: '', message: '', bot: '' });
 	};
-
-	componentDidUnmount() {
-		this.style.transition = 'opacity 1s';
-		this.style.opacity = 1;
-	}
 
 	handleName = e => {
 		this.setState({ name: e.target.value });

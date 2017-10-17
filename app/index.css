@@ -24,6 +24,10 @@ ul {
 .Contact {
 	opacity: 0;
 }
+.details {
+	opacity: 0;
+}
+
 li {
 	list-style-type: none;
 }

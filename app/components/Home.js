@@ -6,13 +6,14 @@ import me from '../images/me.jpg';
 class Home extends React.Component {
 	componentDidMount() {
 		const el = document.querySelector('.Home');
-		el.style.transition = 'opacity 1s';
+		el.style.transition = 'opacity 1.5s';
 		el.style.opacity = 1;
 	}
 
-	componentDidUnmount() {
-		this.style.transition = 'opacity 1s';
-		this.style.opacity = 1;
+	componentWillUnmount() {
+		const el = document.querySelector('.Home');
+		el.style.transition = 'opacity 1s';
+		el.style.opacity = 0;
 	}
 
 	render() {

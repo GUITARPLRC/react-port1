@@ -11,6 +11,20 @@ class ProjectDetails extends React.Component {
 		};
 	}
 
+	componentDidMount() {
+		setTimeout(() => {
+			const el = document.querySelector('.details');
+			el.style.transition = 'opacity 1.5s';
+			el.style.opacity = 1;
+		}, 200);
+	}
+
+	componentWillUnmount() {
+		const el = document.querySelector('.details');
+		el.style.transition = 'opacity 1s';
+		el.style.opacity = 0;
+	}
+
 	handleClick = () => {
 		const title = this.state.project.slice(1);
 		window.location = projectInfo[title].link;
