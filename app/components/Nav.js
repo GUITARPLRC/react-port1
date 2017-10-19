@@ -29,7 +29,7 @@ class Nav extends React.Component {
 			<div>
 				<AppBar
 					onRightIconButtonTouchTap={this.handleToggle}
-					style={{ backgroundColor: '#4f9a94' }}
+					style={{ backgroundColor: '#AABEC7' }}
 					iconElementLeft={
 						<a href="/">
 							<img
@@ -61,8 +61,8 @@ class Nav extends React.Component {
 					<NavLink exact to="/">
 						<MenuItem onTouchTap={this.handleClose}>About</MenuItem>
 					</NavLink>
-					<NavLink to="/projects">
-						<MenuItem onTouchTap={this.handleClose}>Projects</MenuItem>
+					<NavLink to="/work">
+						<MenuItem onTouchTap={this.handleClose}>Work</MenuItem>
 					</NavLink>
 					<NavLink to="/contact">
 						<MenuItem onTouchTap={this.handleClose}>Contact</MenuItem>

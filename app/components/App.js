@@ -17,8 +17,8 @@ const App = () => (
 					<Nav />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route exact path="/projects" component={Projects} />
-						<Route path="/projects/details" component={ProjectDetails} />
+						<Route exact path="/work" component={Projects} />
+						<Route path="/work/details" component={ProjectDetails} />
 						<Route path="/contact" component={Contact} />
 						<Route
 							render={function() {

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-	background-color: #00796b;
+	background-color: #7794a1;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	color: #fff;
@@ -11,33 +11,22 @@ body {
 	margin: 0 0 3% 0;
 	overflow-x: hidden;
 }
-
+h3 {
+	color: #fff;
+}
 ul {
 	padding: 0;
 }
-.Home {
-	opacity: 0;
-}
-.Projects {
-	opacity: 0;
-}
-.Contact {
-	opacity: 0;
-}
-.details {
-	opacity: 0;
-}
-
 li {
 	list-style-type: none;
 }
-
 a {
 	color: #000;
 	text-decoration: none;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
 .row {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -47,7 +36,6 @@ a {
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
-
 .column {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -60,7 +48,6 @@ a {
 	-ms-flex-align: center;
 	align-items: center;
 }
-
 .column input {
 	border-radius: 3px;
 	margin: 10px 0;
@@ -69,21 +56,31 @@ a {
 	font-size: 16px;
 	width: 80%;
 }
-
 .column label {
 	text-align: center;
 	font-size: 30px;
 	font-weight: 200;
 }
-
 .header {
 	text-align: center;
 	font-size: 30px;
 	font-weight: 200;
 }
-
 .container {
 	margin: 0 auto;
+}
+
+.Home {
+	opacity: 0;
+}
+.Projects {
+	opacity: 0;
+}
+.Contact {
+	opacity: 0;
+}
+.details {
+	opacity: 0;
 }
 
 #logo {
@@ -101,12 +98,17 @@ a {
 	flex-direction: column;
 	margin: 10px 0 0 15px;
 }
-
 .social a {
 	margin: 10px 0;
 }
 .social a svg {
 	width: 35px;
+}
+.social a svg:hover {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-name: shake;
+	animation-name: shake;
 }
 
 #home {

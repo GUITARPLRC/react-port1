@@ -12,10 +12,6 @@ import force from '../images/force.jpg';
 import scatterplot from '../images/scatterplot.jpg';
 import games from '../images/games.jpg';
 import timestamp from '../images/timestamp.jpg';
-import wiki from '../images/wiki.jpg';
-import weather from '../images/weather.jpg';
-import twitch from '../images/twitch.jpg';
-import leaderboard from '../images/leaderboard.jpg';
 
 class Projects extends React.Component {
 	componentDidMount() {
@@ -39,25 +35,23 @@ class Projects extends React.Component {
 					id="projectsIntro"
 					zDepth={5}
 					style={{
-						backgroundColor: '#ccc',
+						backgroundColor: '#315C6F',
+						color: '#fff',
 						margin: '3% auto 0 auto',
 						padding: 20,
 						width: '80%'
 					}}
 				>
 					<div style={{ textAlign: 'center' }}>
-						<h2>Projects</h2>
-						<p>
-							Here is a list of some of my current projects. Click on an image to get more info and to see the project
-							live!
-						</p>
+						<h2>Work</h2>
+						<p>Here is some of my current work. Click on an image to get more info and to see the project live!</p>
 					</div>
 					<h3>React.js</h3>
 					<div className="projects">
 						<div className="items">
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?movie`
 								}}
 							>
@@ -71,7 +65,7 @@ class Projects extends React.Component {
 
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?dungeon`
 								}}
 							>
@@ -85,7 +79,7 @@ class Projects extends React.Component {
 
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?rect`
 								}}
 							>
@@ -99,7 +93,7 @@ class Projects extends React.Component {
 
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?gameoflife`
 								}}
 							>
@@ -112,72 +106,13 @@ class Projects extends React.Component {
 							</Link>
 						</div>
 					</div>
-					<h3>D3.js</h3>
-					<div className="projects">
-						<div className="items">
-							<Link
-								to={{
-									pathname: '/projects/details',
-									search: `?gdp`
-								}}
-							>
-								<div>
-									<img src={gdp} alt="pic of US GDP project" />
-									<div className="text">
-										<h3>US Gross Domestic Product</h3>
-									</div>
-								</div>
-							</Link>
 
-							<Link
-								to={{
-									pathname: '/projects/details',
-									search: `?heatmap`
-								}}
-							>
-								<div>
-									<img src={heatmap} alt="pic of heat map project" />
-									<div className="text">
-										<h3>Surface Temperature</h3>
-									</div>
-								</div>
-							</Link>
-
-							<Link
-								to={{
-									pathname: '/projects/details',
-									search: `?force`
-								}}
-							>
-								<div>
-									<img src={force} alt="pic of force graph project" />
-									<div className="text">
-										<h3>National Contiguity</h3>
-									</div>
-								</div>
-							</Link>
-
-							<Link
-								to={{
-									pathname: '/projects/details',
-									search: `?scatterplot`
-								}}
-							>
-								<div>
-									<img src={scatterplot} alt="pic of scatterplot project" />
-									<div className="text">
-										<h3>Professional Bicycle Racing Doping</h3>
-									</div>
-								</div>
-							</Link>
-						</div>
-					</div>
 					<h3>Node.js</h3>
-					<div className="projects">
+					<div className="work">
 						<div className="items">
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?games`
 								}}
 							>
@@ -191,7 +126,7 @@ class Projects extends React.Component {
 
 							<Link
 								to={{
-									pathname: '/projects/details',
+									pathname: '/work/details',
 									search: `?timestamp`
 								}}
 							>
@@ -204,61 +139,62 @@ class Projects extends React.Component {
 							</Link>
 						</div>
 					</div>
-					<h3>API</h3>
-					<div className="projects">
+
+					<h3>D3.js</h3>
+					<div className="work">
 						<div className="items">
 							<Link
 								to={{
-									pathname: '/projects/details',
-									search: `?wiki`
+									pathname: '/work/details',
+									search: `?gdp`
 								}}
 							>
 								<div>
-									<img src={wiki} alt="pic of wiki project" />
+									<img src={gdp} alt="pic of US GDP project" />
 									<div className="text">
-										<h3>Wiki Search</h3>
+										<h3>US Gross Domestic Product</h3>
 									</div>
 								</div>
 							</Link>
 
 							<Link
 								to={{
-									pathname: '/projects/details',
-									search: `?weather`
+									pathname: '/work/details',
+									search: `?heatmap`
 								}}
 							>
 								<div>
-									<img src={weather} alt="pic of weather project" />
+									<img src={heatmap} alt="pic of heat map project" />
 									<div className="text">
-										<h3>Local Weather</h3>
+										<h3>Surface Temperature</h3>
 									</div>
 								</div>
 							</Link>
 
 							<Link
 								to={{
-									pathname: '/projects/details',
-									search: `?twitch`
+									pathname: '/work/details',
+									search: `?force`
 								}}
 							>
 								<div>
-									<img src={twitch} alt="pic of twitch project" />
+									<img src={force} alt="pic of force graph project" />
 									<div className="text">
-										<h3>Twitch Channels</h3>
+										<h3>National Contiguity</h3>
 									</div>
 								</div>
 							</Link>
 
 							<Link
 								to={{
-									pathname: '/projects/details',
-									search: `?leaderboard`
+									pathname: '/work/details',
+									search: `?scatterplot`
 								}}
 							>
 								<div>
-									<img src={leaderboard} alt="pic of leaderboard project" />
+									<img src={scatterplot} alt="pic of scatterplot project" />
 									<div className="text">
-										<h3>Free Code Camp Leaderboard</h3>
+										<h3>Professional Bicycle Racing Doping</h3>
 									</div>
 								</div>
 							</Link>

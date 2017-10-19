@@ -2,10 +2,6 @@ import movie from '../images/movie.jpg';
 import dungeon from '../images/dungeon.jpg';
 import rect from '../images/rect.jpg';
 import gameoflife from '../images/gameoflife.jpg';
-import wiki from '../images/wiki.jpg';
-import weather from '../images/weather.jpg';
-import twitch from '../images/twitch.jpg';
-import leaderboard from '../images/leaderboard.jpg';
 import gdp from '../images/US_GDP.jpg';
 import heatmap from '../images/heatmap.jpg';
 import force from '../images/force.jpg';
@@ -46,42 +42,6 @@ module.exports = {
 		tools: ['HTML/CSS', 'React', 'Redux'],
 		image: gameoflife,
 		link: 'http://chuckreynolds.tech/gameoflife/index.html'
-	},
-	wiki: {
-		title: 'Wiki Search',
-		info:
-			'A great project to work with the Wikimedia API for the first time. The API is not the easiest to understand but overall the documentation ' +
-			'is decent and helped a lot.',
-		tools: ['HTML/CSS', 'Javascript', 'Wikimedia API'],
-		image: wiki,
-		link: 'http://chuckreynolds.tech/wiki/index.html'
-	},
-	weather: {
-		title: 'Local Weather',
-		info:
-			"At first I was using local location API to get a client's location in order to serve the weather report. That soon proved to be a nusance. " +
-			'I then resorted to using Google location services to get better support for all clients.',
-		tools: ['HTML/CSS', 'Javascript', 'OpenWeather API'],
-		image: weather,
-		link: 'http://chuckreynolds.tech/weather/index.html'
-	},
-	twitch: {
-		title: 'Twitch Channels',
-		info:
-			'The Twitch API was another hard one to work with. Halfway through the project they changed their endpoints and data structure which meant I had to ' +
-			'refactor my code. It was not terrible, but it was my first time having to do this because of a third party API.',
-		tools: ['HTML/CSS', 'Javascript', 'Twitch API'],
-		image: twitch,
-		link: 'http://chuckreynolds.tech/twitch/index.html'
-	},
-	leaderboard: {
-		title: 'Free Code Camp Leaderboard',
-		info:
-			'The FreeCodeCamp API was really easy to use. The hardest part of this project was figuring out how to reorganize my data when a client would click on ' +
-			'a column.',
-		tools: ['HTML/CSS', 'Javascript', 'FreeCodeCamp API'],
-		image: leaderboard,
-		link: 'http://chuckreynolds.tech/leaderboard/index.html'
 	},
 	gdp: {
 		title: 'US Gross Domestic Product',
