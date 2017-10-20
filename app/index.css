@@ -235,6 +235,11 @@ a {
 }
 .details img {
 	border-radius: 10px;
+	width: 100%;
+	max-width: 1000px;
+}
+div.details > div {
+	margin: 10px;
 }
 
 @-webkit-keyframes shake {

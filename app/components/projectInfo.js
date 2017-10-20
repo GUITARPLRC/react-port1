@@ -15,7 +15,8 @@ module.exports = {
 		info: 'This was one of my first projects with React and has since went through several changes.',
 		tools: ['HTML/CSS', 'React'],
 		image: movie,
-		link: 'http://chuckreynolds.tech/movie/index.html'
+		link: 'http://chuckreynolds.tech/movie/index.html',
+		github: 'new-react-movies'
 	},
 	dungeon: {
 		title: 'Dungeon of Doom',
@@ -25,14 +26,16 @@ module.exports = {
 			'and knowledge of Redux, game design, and computational thinking about how things are related within a structure.',
 		tools: ['HTML/CSS', 'React', 'Redux'],
 		image: dungeon,
-		link: 'http://chuckreynolds.tech/dungeon/index.html'
+		link: 'http://chuckreynolds.tech/dungeon/index.html',
+		github: 'rogue'
 	},
 	rect: {
 		title: 'Create A Layout',
 		info: 'This is a great tool to visual a layout design and add layering.',
 		tools: ['HTML/CSS', 'Bootstrap', 'React', 'React-RND'],
 		image: rect,
-		link: 'http://guitarplrc.github.io/rect-proj2'
+		link: 'http://guitarplrc.github.io/rect-proj2',
+		github: 'rect-proj2'
 	},
 	gameoflife: {
 		title: "Conway's Game of Life",
@@ -41,7 +44,8 @@ module.exports = {
 			'be the hard part. One issue I ran into, with this project, was deep cloning an object to reference as previous state, but I quickly found a way to do this.',
 		tools: ['HTML/CSS', 'React', 'Redux'],
 		image: gameoflife,
-		link: 'http://chuckreynolds.tech/gameoflife/index.html'
+		link: 'http://chuckreynolds.tech/gameoflife/index.html',
+		github: 'game_of_life'
 	},
 	gdp: {
 		title: 'US Gross Domestic Product',
@@ -49,7 +53,8 @@ module.exports = {
 			'This was my first project with D3. The hardest part of this project was understanding D3, specifically data binding, syntax, and styling.',
 		tools: ['HTML/CSS', 'Javascript', 'D3.js'],
 		image: gdp,
-		link: 'http://chuckreynolds.tech/gdp/index.html'
+		link: 'http://chuckreynolds.tech/gdp/index.html',
+		github: 'gdp'
 	},
 	heatmap: {
 		title: 'Surface Temperture',
@@ -57,7 +62,8 @@ module.exports = {
 			'This style of heatmap was a little difficult to implement. Getting all the data into the view and in order proved to be quite difficult.',
 		tools: ['HTML/CSS', 'Javascript', 'D3.js'],
 		image: heatmap,
-		link: 'http://chuckreynolds.tech/heatmap/index.html'
+		link: 'http://chuckreynolds.tech/heatmap/index.html',
+		github: 'd3-heatmap'
 	},
 	force: {
 		title: 'National Contiguity',
@@ -66,7 +72,8 @@ module.exports = {
 			' Overall a great project to complete and learn from.',
 		tools: ['HTML/CSS', 'Javascript', 'D3.js'],
 		image: force,
-		link: 'http://chuckreynolds.tech/force/index.html'
+		link: 'http://chuckreynolds.tech/force/index.html',
+		github: 'force'
 	},
 	scatterplot: {
 		title: 'Professional Bicycle Racing Doping',
@@ -75,7 +82,8 @@ module.exports = {
 			' I had to reverse that and build right to left and top to bottom. It took sometime to figure this out but really helped in my understanding of D3.',
 		tools: ['HTML/CSS', 'Javascript', 'D3.js'],
 		image: scatterplot,
-		link: 'http://chuckreynolds.tech/scatterplot/index.html'
+		link: 'http://chuckreynolds.tech/scatterplot/index.html',
+		github: 'scatterplot'
 	},
 	games: {
 		title: 'Game Search',
@@ -83,7 +91,8 @@ module.exports = {
 			'This was my first real project using Node.js/Express.js. I really wanted to push my knowledge further by creating a full stack app.',
 		tools: ['HTML/CSS', 'Javascript', 'Node.js/Express.js', 'PUG', 'MongoDB'],
 		image: games,
-		link: 'https://mighty-woodland-65549.herokuapp.com/'
+		link: 'https://mighty-woodland-65549.herokuapp.com/',
+		github: 'games'
 	},
 	timestamp: {
 		title: 'Timestamp Service',
@@ -92,6 +101,7 @@ module.exports = {
 			" cases I couldn't keep up, so I decided to use a utility library called Moment.js. If you have not used or do not know about Moment.js, it's definitely worth checking out.",
 		tools: ['HTML/CSS', 'Javascript', 'Node.js/Express.js', 'Moment.js', 'PUG'],
 		image: timestamp,
-		link: 'https://timestamp-express.herokuapp.com/'
+		link: 'https://timestamp-express.herokuapp.com/',
+		github: 'timestamp'
 	}
 };

@@ -41,6 +41,11 @@ class ProjectDetails extends React.Component {
 				<h3>Tools:</h3>
 				<ul>{projectInfo[project].tools.map(each => <li key={each}>{each}</li>)}</ul>
 				<RaisedButton label="Click Here To Open App" primary onClick={this.handleClick} />
+				<RaisedButton
+					label="Show Me The Code"
+					secondary
+					href={`https://github.com/GUITARPLRC/${projectInfo[project].github}`}
+				/>
 			</div>
 		);
 	}
