@@ -104,7 +104,7 @@ a {
 .Home {
 	opacity: 0;
 	text-align: center;
-	width: 60%;
+	width: 70%;
 }
 .Home h1:last-of-type {
 	margin: 0 0 50px 0;
@@ -291,12 +291,8 @@ a {
 	.items a {
 		margin: 0 auto 20px;
 	}
-}
-
-@media (max-width: 768px) {
-	#contact {
-		padding: 25px;
-		width: 80%;
+	.contact {
+		width: 90%;
 	}
 }
 
@@ -309,15 +305,20 @@ a {
 		width: 100%;
 	}
 }
-
-@media (max-width: 617px) {
+@media (max-width: 700px) {
+	.Home {
+		width: 85%;
+	}
 	.Home .home__button {
-		margin: 0;
+		margin: 10px;
 	}
 }
 
 @media (max-width: 520px) {
-	#home img {
-		width: 85%;
+	.Home img {
+		width: 70%;
+	}
+	.items a {
+		width: 100%;
 	}
 }
