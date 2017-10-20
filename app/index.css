@@ -181,6 +181,9 @@ a {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.items a {
+	margin: 10px;
+}
 .items div {
 	border-radius: 10px;
 	overflow: hidden;
@@ -190,7 +193,6 @@ a {
 }
 .items div img {
 	border-radius: 10px;
-	margin: 0 30px;
 	-webkit-transition: 0.3s ease;
 	transition: 0.3s ease;
 	max-width: 300px;
@@ -281,17 +283,13 @@ a {
 	}
 }
 
-@media (max-width: 1200px) {
-	.items {
-		display: block;
+@media (max-width: 965px) {
+	.items,
+	.project__page h3 {
+		text-align: center;
 	}
-	.items div {
-		margin: 2% auto;
-		width: 100%;
-	}
-	.items div img {
-		margin: 0;
-		width: 100%;
+	.items a {
+		margin: 0 auto 20px;
 	}
 }
 
