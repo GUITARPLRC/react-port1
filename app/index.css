@@ -70,24 +70,12 @@ a {
 	margin: 0 auto;
 }
 
-.Home {
-	opacity: 0;
-}
-.Projects {
-	opacity: 0;
-}
-.Contact {
-	opacity: 0;
-}
-.details {
-	opacity: 0;
-}
+/* Nav Bar */
 
 #logo {
 	border-radius: 50%;
 	margin: 20px;
 }
-
 .social {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -111,21 +99,37 @@ a {
 	animation-name: shake;
 }
 
-#home {
-	padding: 0 3%;
+/* Home Page */
+
+.Home {
+	opacity: 0;
 	text-align: center;
 	width: 60%;
 }
-#home img {
+.Home h1:last-of-type {
+	margin: 0 0 50px 0;
+}
+.Home img {
+	margin: 30px 0 0 0;
 	-webkit-transform: rotate(5deg);
 	transform: rotate(5deg);
 }
-#home p span a {
+
+.Home > p {
+	text-align: left;
+}
+.Home hr:last-of-type {
+	margin: 30px 0 0 0;
+}
+.Home .home__button {
+	margin: 0 25px;
+}
+.Home p span a {
 	color: #000;
 	-webkit-transition: all 0.3 ease-in;
 	transition: all 0.3 ease-in;
 }
-#home p span a:hover {
+.Home p span a:hover {
 	color: #fff;
 	-webkit-transition: all 0.3 ease-in;
 }
@@ -135,32 +139,47 @@ a {
 }
 .skills h2 {
 	font-size: 30px;
-	margin: 50px 0 20px 0;
+	margin: 20px 0;
 }
-.skills .eachSkill {
+.eachSkill {
 	max-width: 90%;
 }
-.skills .eachSkill div {
+.eachSkill div {
 	width: 25%;
 }
-.skills .eachSkill div svg {
+.eachSkill div svg {
 	height: 100px;
 	width: 100px;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.skills .eachSkill p {
+.eachSkill > p {
 	font-size: 18px;
-	margin: 0 0 40px 0;
+	margin: 0 auto 40px auto;
 }
 
-.projects {
+.eachSkill svg:hover {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-name: shake;
+	animation-name: shake;
+}
+
+/* Work Page */
+
+.project__page {
+	opacity: 0;
 	text-align: center;
+}
+.project__page h3 {
+	text-align: left;
 }
 .items {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .items div {
 	border-radius: 10px;
@@ -171,11 +190,9 @@ a {
 }
 .items div img {
 	border-radius: 10px;
-	height: 200px;
 	margin: 0 30px;
 	-webkit-transition: 0.3s ease;
 	transition: 0.3s ease;
-	width: 80%;
 	max-width: 300px;
 }
 .items div .text {
@@ -194,8 +211,11 @@ a {
 	opacity: 1;
 }
 
-#contact {
+/* Contact Page */
+
+.contact {
 	margin: 10% auto 0 auto;
+	opacity: 0;
 	padding: 50px;
 	width: 50%;
 }
@@ -203,21 +223,16 @@ a {
 	float: left;
 }
 
+/* Project Details Page */
+
 .details {
 	margin: 3% auto 0;
-	max-width: 960px;
+	opacity: 0;
 	text-align: center;
+	width: 90%;
 }
 .details img {
 	border-radius: 10px;
-	max-width: 90%;
-}
-
-.eachSkill svg:hover {
-	-webkit-animation-duration: 0.3s;
-	animation-duration: 0.3s;
-	-webkit-animation-name: shake;
-	animation-name: shake;
 }
 
 @-webkit-keyframes shake {
@@ -294,6 +309,12 @@ a {
 	.skills .eachSkill div {
 		margin: 0 auto;
 		width: 100%;
+	}
+}
+
+@media (max-width: 617px) {
+	.Home .home__button {
+		margin: 0;
 	}
 }
 

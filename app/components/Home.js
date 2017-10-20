@@ -18,9 +18,12 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<div id="home" className="container Home">
-				<h1>My Name is Chuck Reynolds and I am a Front End Developer</h1>
+			<div className="container Home">
 				<img src={me} alt="My Avatar" style={{ borderRadius: '50%' }} />
+				<h1>Chuck Reynolds</h1>
+				<h1>Front End Web Developer</h1>
+				<hr />
+				<h2>About Me</h2>
 				<p>
 					I am currently living just outside of Chicago, IL and I have a passion for making web sites and learning about
 					new trends in web development. I primarily work within a JavaScript stack, but I also create WordPress sites.
@@ -36,7 +39,15 @@ class Home extends React.Component {
 						<a href="mailto:chuck@chuckreynolds.tech"> HERE.</a>
 					</span>
 				</p>
-				<RaisedButton label="Download Resume" primary href="./ChuckReynoldsResume.pdf" download />
+				<RaisedButton
+					className="home__button"
+					label="Download Resume"
+					primary
+					href="./ChuckReynoldsResume.pdf"
+					download
+				/>
+				<RaisedButton className="home__button" label="See My Work" secondary href="/work" />
+				<hr />
 				<div className="skills">
 					<h2>My Toolbox</h2>
 					<div className="eachSkill container row">

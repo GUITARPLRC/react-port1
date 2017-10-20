@@ -20,14 +20,14 @@ class Contact extends React.Component {
 
 	componentDidMount() {
 		setTimeout(() => {
-			const el = document.querySelector('.Contact');
+			const el = document.querySelector('.contact');
 			el.style.transition = 'opacity 1s';
 			el.style.opacity = 1;
 		}, 200);
 	}
 
 	componentWillUnmount() {
-		const el = document.querySelector('.Contact');
+		const el = document.querySelector('.contact');
 		el.style.transition = 'opacity 1s';
 		el.style.opacity = 0;
 	}
@@ -134,7 +134,7 @@ class Contact extends React.Component {
 
 	render() {
 		return (
-			<Paper id="contact" zDepth={5} className="Contact">
+			<Paper zDepth={5} className="contact">
 				<h2>Get In Touch</h2>
 				<p>Interested in working together? Just want to say 'hi'? Fill out the form below</p>
 				{this.state.status && (
